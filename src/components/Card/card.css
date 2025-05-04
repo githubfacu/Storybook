@@ -1,0 +1,23 @@
+.storybook-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.storybook-card--primary{
+
+}
+
+.storybook-card--secondary{
+    background-color: black;
+    color: white;
+}
+
+.storybook-card--fig{
+    width: 150px;
+    height: 150px;
+}

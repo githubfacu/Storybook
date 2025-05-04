@@ -16,7 +16,8 @@ const meta: Meta<typeof Button> = {
         description: 'visual style of button',
         control: {type : 'radio'}
     },
-  }
+  },
+  args: {onClick: fn()}
 }
 
 export default meta;

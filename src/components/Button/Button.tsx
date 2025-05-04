@@ -1,19 +1,27 @@
 import React from 'react';
-import type { Props } from './Buttont.props';
 
 import './button.css';
 
-export const Button: React.FC<Props> = ({
+export type VariantProps = 'primary' | 'secondary' | 'success'
+
+export interface ButtonProps {
+    variant?: VariantProps;
+    children: JSX.Element
+    size?: 'small' | 'medium' | 'large';
+    onClick?: () => void;
+}
+
+export const Button: React.FC<ButtonProps> = ({
   variant,
-  textColor,
   children,
   size,
   onClick,
   ...props
-}: Props) => {
+}: ButtonProps) => {
   return (
     <button
       type="button"
+      onClick={onClick}
       className={['storybook-buttonA', `storybook-buttonA--${variant}`, `storybook-buttonA--${size}`].join(' ')}
       {...props}
     >

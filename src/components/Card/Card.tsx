@@ -1,0 +1,39 @@
+import React from 'react'
+
+import './card.css';
+import Image, { ImageProps } from '../Image/Image';
+import { Description, DescriptionProps } from '../Description/Description';
+import { Button, ButtonProps } from '../Button/Button';
+
+export type CardVariant = 'primary' | 'secondary'
+
+export interface CardProps {
+    variant?: CardVariant;
+    image: ImageProps;
+    button: ButtonProps;
+    description: DescriptionProps
+    onMouseOver?: () => void;
+}
+
+export const Card: React.FC<CardProps> = ({
+  variant = 'primary',
+  onMouseOver,
+  image,
+  button,
+  description,
+  ...props
+}: CardProps) => {
+  return (
+    <article
+      onMouseOver={onMouseOver}
+      className={['storybook-card',`storybook-card--${variant}`].join(' ')}
+      {...props}
+    >
+        <figure className='storybook-card--fig'>
+            <Image src={image.src} alt={image.alt} variant={image.variant}/>
+        </figure>
+        <Description label={description.label} variant={description.variant}/>
+        <Button children={button.children} variant={button.variant}/>
+    </article>
+  );
+};
