@@ -1,12 +1,14 @@
 import React from 'react';
 
 export type VariantProps = 'rounded' | 'square'
+export type RoundedSize = 'small' | 'medium' | 'large' | 'full'
 
 export interface ImageProps {
     variant?: VariantProps;
     src: string;
     alt: string;
-    roundedSize?: 'small' | 'medium' | 'large' | 'full';
+    maxWidth?: string;
+    roundedSize?: RoundedSize;
     onMouseOver?: () => void;
 }
 
@@ -20,6 +22,7 @@ const sizeStyles = {
   export const Image: React.FC<ImageProps> = ({
     src,
     alt,
+    maxWidth = '1024px',
     roundedSize,
     variant,
     onMouseOver,
@@ -28,14 +31,12 @@ const sizeStyles = {
     variant === 'rounded' ? sizeStyles[roundedSize ?? 'full'] : '0px';
   
     return (
-      <div style={{ margin: '0px', overflow: 'hidden' }}>
-        <img
-          src={src}
-          alt={alt}
-          onMouseOver={onMouseOver}
-          style={{ maxWidth: '100%', borderRadius: borderRadiusStyle }}
-        />
-      </div>
+      <img
+        src={src}
+        alt={alt}
+        onMouseOver={onMouseOver}
+        style={{ maxWidth: maxWidth, borderRadius: borderRadiusStyle, objectFit: 'cover', width: '100%', height: '100%'}}
+      />
     );
   };
   

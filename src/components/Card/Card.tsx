@@ -29,9 +29,9 @@ export const Card: React.FC<CardProps> = ({
       className={['storybook-card',`storybook-card--${variant}`].join(' ')}
       {...props}
     >
-        <figure className='storybook-card--fig'>
+        <picture className='storybook-card--pic'>
             <Image src={image.src} alt={image.alt} variant={image.variant}/>
-        </figure>
+        </picture>
         <Description label={description.label} variant={description.variant}/>
         <Button children={button.children} variant={button.variant}/>
     </article>
