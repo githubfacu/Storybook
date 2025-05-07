@@ -25,14 +25,14 @@ type Story = StoryObj<typeof meta>;
 
 export const BaseImage : Story = {
     args: {
-        src: 'https://media.licdn.com/dms/image/v2/D4D16AQGOP4Mony9fFA/profile-displaybackgroundimage-shrink_350_1400/B4DZZaOS90GgAY-/0/1745270420697?e=1751500800&v=beta&t=C9pQmBUnFn4SiHXsLcU-OF1J2lCU_x3U-SvwtxD9k0M',
+        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9mMzg3NmFhZWE4NTNlZmM0YWMzZGQxOWVkMzA0MWYyOT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.lmYpvrh6x8iVAAcZzT8nDamkCK8r-Ab0WAwa7RPSwz0',
         alt: '',
     }
 }
 
 export const RoundedImage : Story = {
     args: {
-        src: 'https://media.licdn.com/dms/image/v2/D4D16AQGOP4Mony9fFA/profile-displaybackgroundimage-shrink_350_1400/B4DZZaOS90GgAY-/0/1745270420697?e=1751500800&v=beta&t=C9pQmBUnFn4SiHXsLcU-OF1J2lCU_x3U-SvwtxD9k0M',
+        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9mMzg3NmFhZWE4NTNlZmM0YWMzZGQxOWVkMzA0MWYyOT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.lmYpvrh6x8iVAAcZzT8nDamkCK8r-Ab0WAwa7RPSwz0',
         alt: '',
         variant: 'rounded'
     }

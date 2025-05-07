@@ -20,7 +20,7 @@ const meta: Meta<typeof Card> = {
   args: {
     onMouseOver: fn(),
     image: {
-        src: 'https://media.licdn.com/dms/image/v2/D4D35AQFQEHEr5wV2xQ/profile-framedphoto-shrink_400_400/B4DZZZuZanG0Ac-/0/1745262057410?e=1746910800&v=beta&t=nGK4qipUX4MfgmwGsG7DAfRBnF0wqvmZCfLHQB3o03I',
+        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9mMzg3NmFhZWE4NTNlZmM0YWMzZGQxOWVkMzA0MWYyOT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.lmYpvrh6x8iVAAcZzT8nDamkCK8r-Ab0WAwa7RPSwz0',
         alt: 'Example Image',
         variant: 'rounded',
       },
