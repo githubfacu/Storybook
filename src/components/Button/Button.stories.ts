@@ -16,6 +16,9 @@ const meta: Meta<typeof Button> = {
         description: 'visual style of button',
         control: {type : 'radio'}
     },
+    disabled: {
+      control: { type: 'boolean' },
+    },
   },
   args: {onClick: fn()}
 }
@@ -49,5 +52,13 @@ export const Add: Story = {
       variant: 'primary',
       children: 'Add',
       size: 'large'
+    },
+};
+
+export const Disabled: Story = {
+    args: {
+      variant: 'primary',
+      children: 'Disabled',
+      disabled: true
     },
 };
