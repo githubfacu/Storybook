@@ -1,12 +1,16 @@
 import React from 'react';
 
 export interface InputProps {
+    onChange?: (value: string) => void;
+    value?: string;
     inputType?: string
     placeholder?: string
     disabled?: boolean;
 }
 
 export const Input: React.FC<InputProps> = ({
+    onChange = () => {},
+    value = '',
     inputType = 'text',
     placeholder = 'escribir',
     disabled = false,
@@ -15,6 +19,8 @@ export const Input: React.FC<InputProps> = ({
   return (
     <>
         <input
+            onChange={(e) => onChange(e.target.value)}
+            value={value}
             type={inputType}
             placeholder={placeholder}
             disabled={disabled}

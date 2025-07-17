@@ -12,6 +12,8 @@ export const Form: React.FC<FormProps> = ({ status }) => {
   };
   return (
     <form
+        role="form"
+        aria-label="formulario"
         onSubmit={handleSubmit}
         style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}
     >
