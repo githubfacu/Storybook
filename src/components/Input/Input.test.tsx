@@ -34,4 +34,12 @@ describe('Input', () => {
         const input = screen.getByPlaceholderText(/enter text/i);
         expect(input).toBeDisabled();
     });
+
+    it('does not throw an error when changing the input value', () => {
+        expect(() => {
+            InputRender({ placeholder: 'Enter text', value: '' });
+            const input = screen.getByPlaceholderText(/enter text/i);
+            fireEvent.change(input, { target: { value: 'Nuevo valor' } });
+        }).not.toThrow();
+    });
 });

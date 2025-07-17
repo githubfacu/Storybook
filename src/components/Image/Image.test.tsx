@@ -37,4 +37,10 @@ describe('Image', () => {
         fireEvent.mouseOver(image);
         expect(onMouseOver).toHaveBeenCalled();
     });
+
+    it('applies the full rounded variant when no roundedSize is passed', () => {
+        ImageRender({ ...defaultProps, variant: 'rounded' });
+        const image = screen.getByAltText(/example image/i);
+        expect(image).toHaveStyle('border-radius: 9999px');
+    });
 });
