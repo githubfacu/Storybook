@@ -1,12 +1,16 @@
 import React from 'react';
-import { Input } from '../Input/Input';
-import { Button } from '../Button/Button';
+import { Input, InputProps } from '../Input/Input';
+import { Button, ButtonProps } from '../Button/Button';
 
 export interface FormProps {
   status: 'typing' | 'submitting' | 'success' | 'error';
+  input: InputProps;
+  button: ButtonProps
+  errorMessage?: string;
+  successMessage?: string;
 }
 
-export const Form: React.FC<FormProps> = ({ status }) => {
+export const Form: React.FC<FormProps> = ({ status, input, button, errorMessage, successMessage }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -18,25 +22,21 @@ export const Form: React.FC<FormProps> = ({ status }) => {
         style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}
     >
       <Input
-        inputType="text"
-        placeholder="Escribe algo..."
+        {...input}
         disabled={status === 'submitting' || status === 'success'}
       />
       <Button
-        buttonType="submit"
+        {...button}
         disabled={status === 'submitting' || status === 'success'}
-        variant='primary'
-      >
-        <span>Enviar</span>
-      </Button>
+      />
       {status === 'error' && (
         <p style={{ color: 'red', marginTop: '8px' }}>
-          Hubo un error al enviar.
+          {errorMessage || 'Hubo un error al enviar.'}
         </p>
       )}
       {status === 'success' && (
         <p style={{ color: 'green', marginTop: '8px' }}>
-          Enviado correctamente.
+          {successMessage || 'Enviado correctamente.'}
         </p>
       )}
     </form>
