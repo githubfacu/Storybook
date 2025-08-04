@@ -19,7 +19,6 @@ describe('Card', () => {
             description: {
                 label: 'This is a card description',
             },
-            onMouseOver: vi.fn(),
         };
     });
 

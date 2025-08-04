@@ -11,13 +11,11 @@ export interface CardProps {
     variant?: CardVariant;
     image: ImageProps;
     button: ButtonProps;
-    description: DescriptionProps
-    onMouseOver?: () => void;
+    description: DescriptionProps;
 }
 
 export const Card: React.FC<CardProps> = ({
   variant = 'primary',
-  onMouseOver,
   image,
   button,
   description,
@@ -25,8 +23,7 @@ export const Card: React.FC<CardProps> = ({
 }: CardProps) => {
   return (
     <article
-      onMouseOver={onMouseOver}
-      className={['storybook-card',`storybook-card--${variant}`].join(' ')}
+      className={['storybook-card', `storybook-card--${variant}`].join(' ')}
       {...props}
     >
         <picture className='storybook-card--pic'>

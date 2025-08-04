@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 
 import { Card } from './Card'
 
@@ -18,9 +17,8 @@ const meta: Meta<typeof Card> = {
     },
   },
   args: {
-    onMouseOver: fn(),
     image: {
-        src: 'https://u-static.haozhaopian.net/uid_0815f06c44d4491f8c45e04c14bfcec0/aiImage/e9e6c3e41693403a9bb31cd018fe7783.jpg',
+        src: 'https://u-static.haozhaopian.net/uid_0815f06c44d4491f8c45e04c14bfcec0/aiImage/93f3f22b3d4942b88a344de8ab1b1e98.jpg@400w_400h_1l.src',
         alt: 'Example Image',
         variant: 'rounded',
       },

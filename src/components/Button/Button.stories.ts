@@ -47,14 +47,6 @@ export const Success: Story = {
     },
 };
 
-export const Add: Story = {
-    args: {
-      variant: 'primary',
-      children: 'Add',
-      size: 'large'
-    },
-};
-
 export const Disabled: Story = {
     args: {
       variant: 'primary',
