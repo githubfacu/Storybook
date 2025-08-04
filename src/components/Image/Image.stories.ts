@@ -25,15 +25,17 @@ type Story = StoryObj<typeof meta>;
 
 export const BaseImage : Story = {
     args: {
-        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9mMzg3NmFhZWE4NTNlZmM0YWMzZGQxOWVkMzA0MWYyOT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.lmYpvrh6x8iVAAcZzT8nDamkCK8r-Ab0WAwa7RPSwz0',
+        src: 'https://u-static.fotor.com/images/text-to-image/result/PRO-3c09bbc16b0048408d6c76f9bb161665.jpg',
         alt: '',
+        maxWidth: '500px',
     }
 }
 
 export const RoundedImage : Story = {
     args: {
-        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9mMzg3NmFhZWE4NTNlZmM0YWMzZGQxOWVkMzA0MWYyOT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.lmYpvrh6x8iVAAcZzT8nDamkCK8r-Ab0WAwa7RPSwz0',
+        src: 'https://u-static.fotor.com/images/text-to-image/result/PRO-3c09bbc16b0048408d6c76f9bb161665.jpg',
         alt: '',
-        variant: 'rounded'
+        variant: 'rounded',
+        maxWidth: '500px',
     }
 }

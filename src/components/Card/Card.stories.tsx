@@ -20,7 +20,7 @@ const meta: Meta<typeof Card> = {
   args: {
     onMouseOver: fn(),
     image: {
-        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9mMzg3NmFhZWE4NTNlZmM0YWMzZGQxOWVkMzA0MWYyOT9zaXplPTQ5NiZkZWZhdWx0PXJldHJvIn0.lmYpvrh6x8iVAAcZzT8nDamkCK8r-Ab0WAwa7RPSwz0',
+        src: 'https://u-static.haozhaopian.net/uid_0815f06c44d4491f8c45e04c14bfcec0/aiImage/e9e6c3e41693403a9bb31cd018fe7783.jpg',
         alt: 'Example Image',
         variant: 'rounded',
       },
