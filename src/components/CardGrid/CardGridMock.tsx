@@ -12,7 +12,7 @@ export const data: Partial<CardGridProps> = {
           variant: 'rounded',
         },
         button: {
-          children: <>Button 1</>,
+          children: <>Ver más</>,
         },
         description: {
           label: 'Description for card 1',
@@ -29,7 +29,7 @@ export const data: Partial<CardGridProps> = {
           variant: 'rounded',
         },
         button: {
-          children: <>Button 2</>,
+          children: <>Ver más</>,
         },
         description: {
           label: 'Description for card 2',
@@ -46,7 +46,7 @@ export const data: Partial<CardGridProps> = {
           variant: 'rounded',
         },
         button: {
-          children: <>Button 3</>,
+          children: <>Ver más</>,
         },
         description: {
           label: 'Description for card 3',

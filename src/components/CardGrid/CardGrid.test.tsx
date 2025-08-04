@@ -47,10 +47,11 @@ describe('Card', () => {
         expect(screen.getByText('Description for card 2')).toBeInTheDocument();
         expect(screen.getByText('Description for card 3')).toBeInTheDocument();
 
-        expect(screen.getByText('Button 1')).toBeInTheDocument();
-        expect(screen.getByText('Button 2')).toBeInTheDocument();
-        expect(screen.getByText('Button 3')).toBeInTheDocument();
-
+        const button = screen.getAllByRole('button')
+        for (let index = 0; index < button.length; index++) {
+            expect(button[index].textContent).toEqual('Ver más')
+        }
+        
         expect(screen.getByAltText('Image 1')).toHaveAttribute('src', expect.stringContaining('Image/0b897de9714'));
         expect(screen.getByAltText('Image 2')).toHaveAttribute('src', expect.stringContaining('Image/a12ff18fd5'));
         expect(screen.getByAltText('Image 3')).toHaveAttribute('src', expect.stringContaining('Image/29bb823a50'));
